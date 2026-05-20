@@ -150,14 +150,66 @@
 
 
 
-public class Main {
-    public  static  void main(String[] args) {
-        int a = 5;
-        int b = 8;
+//public class Main {
+//    public  static  void main(String[] args) {
+//        int a = 5;
+//        int b = 8;
+//
+//        System.out.println(!(a < 10 && b > 4)); //jarayon 5 10dan kichik bolgani uchun true va 8 4dan katta bolgani uchun true true ning inkori false
+//        System.out.println(!!(a < 10 && b > 10 )); //jarayon 1 amal togri ammo ikkinchisi false ikkisdan bir false bolsa return false qaytadi va falseni inkori true
+//    }
+//}
+//
 
-        System.out.println(!(a < 10 && b > 4)); //jarayon 5 10dan kichik bolgani uchun true va 8 4dan katta bolgani uchun true true ning inkori false
-        System.out.println(!!(a < 10 && b > 10 )); //jarayon 1 amal togri ammo ikkinchisi false ikkisdan bir false bolsa return false qaytadi va falseni inkori true
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int donat = 100000;
+//
+//        if (donat >= 100000){
+//            System.out.println("Borakallo bo'tam bor bo'ling");
+//        }else {
+//            System.out.println("Toma - toma bo'lib daryo bo'lur!");
+//        }
+//
+//
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args) {
+//
+//        for ( int x = 0 ; x<101 ; x =+ 2 ) {
+//            System.out.println("Hello world" + x);
+//        }
+//    }
+//}
+
+
+
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int i = 0;
+//        while ( i < 101) {
+//            System.out.println("Sorry babe");
+//            i++;
+//        }
+//    }
+//}
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ismingizni kiriting:");
+
+        String ism = scanner.next();
+
+        System.out.println("Salom " + ism);
     }
 }
-
 
