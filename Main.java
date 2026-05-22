@@ -199,17 +199,66 @@
 //}
 
 
-import java.util.Scanner;
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Ismingizni kiriting:");
+//
+//        String ism = scanner.next();
+//
+//        System.out.println("Salom " + ism);
+//    }
+//}
+
 
 public class Main {
     public static void main(String[] args) {
+        for(int i = 1; i < 10; i++) {
+            System.out.println("-------------------------------------");
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Ismingizni kiriting:");
+            for(int j = 1; j < 10; j++){
+                System.out.println(i + " * " + j + " = " + (i*j));
+                if (j == 9){
+                    System.out.println(j + "karralilar tugadi");
+                }
+                if (i == 9){
+                    if (j == 9){
+                        System.out.println("Kichik sonlilar karra jadvali tugadi");
+                    }
+                }
+            }
 
-        String ism = scanner.next();
+        }
+        System.out.println("Katta sonlilar karra jadvali");
+        for (int a = 9; a < 20; a++) {
+            System.out.println("-------------------------------------");
 
-        System.out.println("Salom " + ism);
+            for (int b = 1; b < 10; b++) {
+                System.out.println(a + " * " + b + " = " + (a*b));
+                if (a == 19) {
+                    if (b == 9) {
+                        System.out.println("Katta sonlilar karra jadvali tugadi");
+                        System.out.println("3 xonali sonlar karra jadvali");
+                    }
+                }
+            }
+        }
+
+        for (int c = 100; c < 1000; c++){
+            System.out.println("-------------------------------");
+            for (int d = 1; d < 10; d++){
+                System.out.println(c + " * " + d + " = " + (c*d));
+                if (c == 999){
+                    if (d == 9) {
+                        System.out.println("This is the end!\nHold your breath and count to ten!");
+                    }
+                }
+            }
+
+        }
     }
 }
 
