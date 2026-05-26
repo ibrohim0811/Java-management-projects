@@ -262,26 +262,195 @@
 //    }
 //
 
+//public class Main {
+//    public static void main(String[] args){
+//        int n = 10;
+//        long sum = 0;
+//        for (int i = 0; i <= n; i++){
+//            long num = 0;
+//            for (int j = 0; j < i; j++ ){
+//                num = num * 10 + i;
+//            }
+//            System.out.print(num);
+//            sum += num;
+//            if (i != n){
+//                System.out.print(" + ");
+//            }
+//            else {
+//                System.out.print(" = " + sum);
+//
+//
+//            }
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args){
+//        int n = 7;
+//        int x = 2;
+//        int sum = 1;
+//        for (int i = 1; i <= n; i++ ){
+//            int pow = 1;
+//           for (int j = 1; j <= i; j++){
+//                pow *= x;
+//
+//           }
+//            sum = sum + pow;
+//            System.out.println(pow);
+//       System.out.println(sum);
+//        }
+//    }
+//}
+
+//
+//public class Main{
+//    public static void main(String[] args){
+//        String color = "Qizil";
+//        String red = "Qizil";
+//        String yellow = "Sariq";
+//        String green = "Yashil";
+//
+//        if (color == red) {
+//            System.out.println("To'xtang!");
+//        }
+//        if (color == yellow){
+//            System.out.println("Tayyorlaning");
+//        }
+//        if (color == green){
+//            System.out.println("Xavfsiz, harakatlaning!");
+//        }
+//        else {
+//            System.out.println("Bunday svetofor rangi yo'q!");
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args){
+//        int guys = 10;
+//        for (int i = 1; i <= 10; i++){
+//            System.out.println(i + " chi odam binoga kirdi");
+//            if (i == guys){
+//                System.out.println("Bino to'ldi");
+//                break;
+//            }
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args){
+//        for (int i = 1; i <= 5; i++){
+//
+//            for (int x = 1; x <= i; x++){
+//                System.out.print(x + " ");
+//            }
+//
+//            System.out.println();
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args){
+//        int toq = 0;
+//        for (int i = 1; i <= 20; i++){
+//            if (i % 2 != 0){
+//                toq += i;
+//            }
+//        }
+//        System.out.println("1 dan 20 gacha bo'lgan toq sonlar yig'indisi: " + toq);
+//    }
+//
+//}
+
+//public class Main{
+//    public static void main(String[] args){
+//        int balans = 50000;
+//        int kofe = 15000;
+//        do{
+//            System.out.println("kofe 15 000 so'm" );
+//            balans -= kofe;
+//            System.out.println("Pul yechildi balansingiz: " + balans);
+//
+//        }while (balans >= kofe);
+//    }
+//}
+//
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args){
+//        int balans = 100000;
+//        System.out.println("Qancha pul yechmoqchisiz?:");
+//        Scanner input = new Scanner(System.in);
+//        int summa = input.nextInt();
+//
+//        if (summa <= balans){
+//            balans -= summa;
+//            System.out.println("Pul muvaffaqiyatli yechildi balansingiz: " + balans);
+//        }else{
+//            System.out.println("Summa is Too large");
+//        }
+//    }
+//}
+
+
+//public class Main {
+//    public static void main(String[] args){
+//
+//        int a = 10;
+//        int b = 100000;
+//        int Counter = 0;
+//        for (int i = a; i <= b; i++){
+//            int n = i;
+//            int reverseNum = 0;
+//
+//            while (n != 0) {
+//                reverseNum = reverseNum * 10 + n % 10;
+//                n = n / 10;
+//
+//            }
+//
+//            if (i == reverseNum) {
+//
+//                Counter += 1;
+//
+//                System.out.println(i);
+//            }
+//
+//        }
+//        System.out.println("-----------------");
+//        System.out.println("Polindrom sonlar:" + Counter);
+//
+//
+//
+//    }
+//}
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
-        int n = 10;
-        long sum = 0;
-        for (int i = 0; i <= n; i++){ 
-            long num = 0;
-            for (int j = 0; j < i; j++ ){
-                num = num * 10 + i;
-            }
-            System.out.print(num);
-            sum += num;
-            if (i != n){
-                System.out.print(" + ");
-            }
-            else {
-                System.out.print(" = " + sum);
+        Scanner scannerA = new Scanner(System.in);
+        System.out.print("A sonni kiriting: ");
+        int a = scannerA.nextInt();
 
+        Scanner scannerB = new Scanner(System.in);
+        System.out.print("B sonni kiriting: ");
+        int b = scannerB.nextInt();
 
+        if (a > b){
+            for (int i = a; i >= b; i--){
+                if (i % 2 == 0){
+                    System.out.println(i);
+                }
             }
+        }else{
+            System.out.println("A B dan katta bo'lishi shart!");
         }
+
     }
 }
 
