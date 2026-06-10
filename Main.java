@@ -429,28 +429,158 @@
 //    }
 //}
 
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args){
+//        Scanner scannerA = new Scanner(System.in);
+//        System.out.print("A sonni kiriting: ");
+//        int a = scannerA.nextInt();
+//
+//        Scanner scannerB = new Scanner(System.in);
+//        System.out.print("B sonni kiriting: ");
+//        int b = scannerB.nextInt();
+//
+//        if (a > b){
+//            for (int i = a; i >= b; i--){
+//                if (i % 2 == 0){
+//                    System.out.println(i);
+//                }
+//            }
+//        }else{
+//            System.out.println("A B dan katta bo'lishi shart!");
+//        }
+//
+//    }
+//}
+
+//bankomat
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args){
+//        int cardPassword = 2011;
+//        Scanner guardian = new Scanner(System.in);
+//        System.out.print("Bank karta parolini kiriting: ");
+//        int password = guardian.nextInt();
+//
+//        if (password == cardPassword) {
+//
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.println("Salom ! Bankomatga xush kelibsiz\nXizmatlardan birini tanlang:\n1.Balansdan pul yechish\n2.Pul kiritish\n3.Balansni tekshirish\n4 Chiqish");
+//            int xizmat = scanner.nextInt();
+//            int MyBalance = 0;
+//
+//            while (true) {
+//                if (xizmat == 1) {
+//                    System.out.println("Hurmatli mijoz balansingiz: " + MyBalance);
+//                    Scanner balance = new Scanner(System.in);
+//                    int usrBalance = balance.nextInt();
+//
+//                    if (usrBalance <= MyBalance) {
+//                        MyBalance -= usrBalance;
+//                        System.out.println("Tranzaksiya amalga oshirildi !");
+//                    }else{
+//                        System.out.println("Balansingiz salbiy!");
+//                        break;
+//                    }
+//                } else if (xizmat == 2) {
+//                    System.out.print("Hurmatli mijoz balansingiz: " + MyBalance);
+//                    Scanner newBalance = new Scanner(System.in);
+//                    int Income = newBalance.nextInt();
+//
+//                    MyBalance += Income;
+//                    System.out.println("Tranzaksiya amalga oshirildi!");
+//
+//                } else if (xizmat == 3) {
+//
+//                    System.out.println("Balansingiz: " + MyBalance);
+//
+//                } else if(xizmat == 4) {
+//                    System.out.println("Biz bilan bo'lganingiz uchun rahmat!");
+//                    System.out.println("Tizimdan chiqilmoqda...");
+//                    break;
+//                } else {
+//                    System.out.println("Noto'g'ri tanlov!");
+//                }
+//            }
+//
+//        }else {
+//            System.out.println("Parol xato!");
+//        }
+//
+//
+//    }
+//}
+
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        int n = 5;
+//        for (int i = 0; i < n; i++){
+//            for (int j = 0; j < n; j++){
+//                if (j < n - i - 1){
+//                    System.out.print(" ");
+//                } else {
+//                    System.out.print("* ");
+//                }
+//
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+//import java.util.Scanner;
+//
+//public class Main{
+//    public static void echoBot(String[] args){
+//
+//        String[] info = {""};
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("nimadur yozing : ");
+//        String word = scanner.next();
+//
+//
+//        info[0] = word;
+//
+//        System.out.println(info[0]);
+//    }
+//}
+
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Scanner scannerA = new Scanner(System.in);
-        System.out.print("A sonni kiriting: ");
-        int a = scannerA.nextInt();
 
-        Scanner scannerB = new Scanner(System.in);
-        System.out.print("B sonni kiriting: ");
-        int b = scannerB.nextInt();
+        Object [] userDetail = getUserDetail();
+        int age = (int) userDetail[0];
+        String name = userDetail[1].toString();
+        String surname = userDetail[2].toString();
 
-        if (a > b){
-            for (int i = a; i >= b; i--){
-                if (i % 2 == 0){
-                    System.out.println(i);
-                }
-            }
-        }else{
-            System.out.println("A B dan katta bo'lishi shart!");
-        }
+        System.out.println(surname + " " + name + " " + age);
+    }
+
+    public static Object[] getUserDetail(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        System.out.print("Enter your name: ");
+        String name = scanner.next();
+        System.out.print("Enter your surname: ");
+        String surname = scanner.next();
+
+        Object [] obj = new Object[3];
+        obj[0] = age;
+        obj[1] = name;
+        obj[2] = surname;
+
+        return obj;
 
     }
+
 }
 
