@@ -550,37 +550,44 @@
 //}
 
 
+
+
+
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
 
-        Object [] userDetail = getUserDetail();
-        int age = (int) userDetail[0];
-        String name = userDetail[1].toString();
-        String surname = userDetail[2].toString();
+        User userDetail = getUser();
+        String name = userDetail.name;
+        String surname = userDetail.surname;
+        int age = userDetail.age;
 
-        System.out.println(surname + " " + name + " " + age);
+        System.out.println(name + " " +surname + " " + age);
+
+
     }
 
-    public static Object[] getUserDetail(){
+    public static User getUser(){
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
+
         System.out.print("Enter your name: ");
         String name = scanner.next();
+
         System.out.print("Enter your surname: ");
         String surname = scanner.next();
 
-        Object [] obj = new Object[3];
-        obj[0] = age;
-        obj[1] = name;
-        obj[2] = surname;
+        User u = new User();
+        u.age = age;
+        u.name = name;
+        u.surname = surname;
 
-        return obj;
+        return  u;
 
     }
 
 }
-
