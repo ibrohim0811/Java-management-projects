@@ -1,0 +1,11 @@
+1. Add task
+    enter title, content
+2. Tasklist
+    id, title, content
+3- change status by name:
+    Enter name:
+4 - Cahnge status by id:
+     Enter id
+5 - Active tasklist
+    id, title, content
+0 - Exit

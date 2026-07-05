@@ -1,3 +1,5 @@
+package ContactManager;
+
 import java.util.Scanner;
 
 public class ContactManager {
@@ -58,11 +60,11 @@ public class ContactManager {
 
         contactArray[currentIndex] = contact;
         currentIndex++;
-        System.out.println("Contact Saved !");
+        System.out.println("ContactManager.Contact Saved !");
     }
 
     public void printContactList() {
-        System.out.println("\n--- Contact List ---");
+        System.out.println("\n--- ContactManager.Contact List ---");
         boolean hasContacts = false;
         for (Contact c : contactArray) {
             if (c != null) {
@@ -71,28 +73,28 @@ public class ContactManager {
             }
         }
         if (!hasContacts) {
-            System.out.println("Contact list is empty.");
+            System.out.println("ContactManager.Contact list is empty.");
         }
     }
 
     public boolean isValidContact(Contact contact) {
         if (contact.name == null || contact.name.trim().length() < 3) {
-            System.out.println("Contact's name is invalid !");
+            System.out.println("ContactManager.Contact's name is invalid !");
             return false;
         }
         if (contact.surname == null || contact.surname.trim().length() < 3) {
-            System.out.println("Contact's Surname is invalid !");
+            System.out.println("ContactManager.Contact's Surname is invalid !");
             return false;
         }
         if (contact.phone.trim().length() != 12 || !contact.phone.startsWith("998")) {
-            System.out.println("Contact's phone is invalid ! \nStart with 998");
+            System.out.println("ContactManager.Contact's phone is invalid ! \nStart with 998");
             return false;
         }
 
         char [] phoneArr = contact.phone.toCharArray();
         for (char c: phoneArr) {
             if (!Character.isDigit(c)) {
-                System.out.println("Contact should be numbers !");
+                System.out.println("ContactManager.Contact should be numbers !");
                 return false;
             }
         }
@@ -138,16 +140,16 @@ public class ContactManager {
             }
         }
         if (!found) {
-            System.out.println("Contact not found!");
+            System.out.println("ContactManager.Contact not found!");
         }
     }
 
     public void menu() {
         System.out.println("\n**Menu**");
-        System.out.println("1. Add Contact");
+        System.out.println("1. Add ContactManager.Contact");
         System.out.println("2. Print List");
         System.out.println("3. Search");
-        System.out.println("4. Delete Contact");
+        System.out.println("4. Delete ContactManager.Contact");
         System.out.println("5. Exit");
     }
 
