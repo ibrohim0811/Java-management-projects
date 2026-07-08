@@ -1,7 +1,7 @@
 package TaskManager;
 
 public class Task {
-    private int id;
+    private int id = 1;
 
     private String title;
 
@@ -31,6 +31,22 @@ public class Task {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public boolean findTitle(String title){
+        if(this.title.equals(title)){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean checkId(int id){
+        if (this.id == id){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 }
 
