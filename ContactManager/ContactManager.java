@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class ContactManager {
     Contact [] contactArray = new Contact[10];
-    int currentIndex = 0;
+    Integer currentIndex = 0;
 
     public void start(){
-        boolean b = true;
+        Boolean b = true;
 
         while (b) { // Dastur to'xtab qolmasligi uchun tsikl ichiga olindi
             menu();
-            int n = getMenuNumber();
+            Integer n = getMenuNumber();
 
             switch (n) {
                 case 1:
@@ -52,7 +52,7 @@ public class ContactManager {
 
         if (currentIndex == contactArray.length) {
             Contact [] newArr = new Contact[currentIndex * 2];
-            for (int i = 0; i < contactArray.length; i++) {
+            for (Integer i = 0; i < contactArray.length; i++) {
                 newArr[i] = contactArray[i];
             }
             contactArray = newArr;
@@ -77,7 +77,7 @@ public class ContactManager {
         }
     }
 
-    public boolean isValidContact(Contact contact) {
+    public Boolean isValidContact(Contact contact) {
         if (contact.name == null || contact.name.trim().length() < 3) {
             System.out.println("ContactManager.Contact's name is invalid !");
             return false;
@@ -160,7 +160,7 @@ public class ContactManager {
     }
 
     public void deleteContactFromArray(String phone) {
-        for (int i = 0; i < contactArray.length; i++) {
+        for (Integer i = 0; i < contactArray.length; i++) {
             Contact contact = contactArray[i];
             if (contact != null && contact.phone.equals(phone)) {
                 contactArray[i] = null;
@@ -170,13 +170,13 @@ public class ContactManager {
         }
     }
 
-    public int getMenuNumber() {
+    public Integer getMenuNumber() {
         System.out.print("Choose menu: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 
-    public boolean isPhoneExists(String phone) {
+    public Boolean isPhoneExists(String phone) {
         for (Contact c: contactArray) {
             if (c != null && c.phone.equals(phone)) {
                 return true;

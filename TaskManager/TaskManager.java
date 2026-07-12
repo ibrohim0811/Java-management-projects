@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class TaskManager {
     Task [] taskArray = new Task[10];
-    int currentIndex = 0;
+    Integer currentIndex = 0;
 
     public void start(){
-        boolean b = true;
+        Boolean b = true;
         while(b) {
             menu();
-            int n = getMenuNumber();
+            Integer n = getMenuNumber();
             switch (n) {
                 case 1:
                     Task task = addTask();
@@ -55,7 +55,7 @@ public class TaskManager {
     public void addToArray(Task task){
         if (taskArray.length == currentIndex){
             Task [] newArr = new Task[currentIndex * 2];
-            for (int i = 0; i < taskArray.length; i++){
+            for (Integer i = 0; i < taskArray.length; i++){
                 newArr[i] = taskArray[i];
             }
             taskArray = newArr;
@@ -114,7 +114,7 @@ public class TaskManager {
         return scanner.next().trim().toLowerCase();
     }
 
-    public String checkStatusbyNum(int num){
+    public String checkStatusbyNum(Integer num){
         if (num > 0 && num < 3){
             if (num == 1) {
                 return "Done ✅";
@@ -131,8 +131,8 @@ public class TaskManager {
     }
 
     public void changeStatusbyName(String title){
-        boolean isFound = true;
-        for (int i = 0; i < taskArray.length; i++){
+        Boolean isFound = true;
+        for (Integer i = 0; i < taskArray.length; i++){
             Task task = taskArray[i];
 
             if(task != null && task.findTitle(title)){
@@ -145,16 +145,16 @@ public class TaskManager {
         }
     }
 
-    public int getId(){
+    public Integer getId(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Task ID raqamini kiriting: ");
         return scanner.nextInt();
     }
 
-    public void changeStatusbyId(int id){
-        boolean isFound = false;
+    public void changeStatusbyId(Integer id){
+        Boolean isFound = false;
 
-        for (int i = 0; i < taskArray.length; i++){
+        for (Integer i = 0; i < taskArray.length; i++){
             Task task = taskArray[i];
 
             if (task != null && task.checkId(id)){
@@ -171,7 +171,7 @@ public class TaskManager {
     }
 
     public void printActiveTasks(){
-        for(int i = 0; i < taskArray.length; i++){
+        for(Integer i = 0; i < taskArray.length; i++){
             Task task = taskArray[i];
             if (task.getStatus().equals("done")){
                 System.out.printf("%-15s | %-30s | %-10s%n", "TITLE", "CONTENT", "STATUS");

@@ -6,13 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         projectChooser();
+
+
     }
 
     public static void projectChooser(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("1.ContactManager\n2.TaskManager");
         System.out.print("Projectni tanlang: ");
-        int choose = scanner.nextInt();
+        Integer choose = scanner.nextInt();
         if (choose == 1){
             ContactManager.ContactManager contactManager = new ContactManager.ContactManager();
             contactManager.start();
