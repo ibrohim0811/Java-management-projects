@@ -1,5 +1,7 @@
 package TaskManager;
 
+import util.ScannerUtil;
+
 import java.util.Scanner;
 
 public class TaskManager {
@@ -10,7 +12,7 @@ public class TaskManager {
         Boolean b = true;
         while(b) {
             menu();
-            Integer n = getMenuNumber();
+            Integer n = ScannerUtil.getMenuNumber();
             switch (n) {
                 case 1:
                     Task task = addTask();
@@ -67,12 +69,6 @@ public class TaskManager {
 
     public static void menu(){
         System.out.println("TaskManager Loyihasi:\n1. Add Task\n2. TaskList\n3. Change status by name\n4. Cahnge status by id\n5. Active TaskList\n 0. Exit");
-    }
-
-    public int getMenuNumber() {
-        System.out.print("Choose menu: ");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
     }
 
     public void printAlltask() {

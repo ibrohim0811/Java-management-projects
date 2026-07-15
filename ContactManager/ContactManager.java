@@ -1,5 +1,7 @@
 package ContactManager;
 
+import util.ScannerUtil;
+
 import java.util.Scanner;
 
 public class ContactManager {
@@ -11,7 +13,7 @@ public class ContactManager {
 
         while (b) { // Dastur to'xtab qolmasligi uchun tsikl ichiga olindi
             menu();
-            Integer n = getMenuNumber();
+            Integer n = ScannerUtil.getMenuNumber();
 
             switch (n) {
                 case 1:
@@ -170,11 +172,7 @@ public class ContactManager {
         }
     }
 
-    public Integer getMenuNumber() {
-        System.out.print("Choose menu: ");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
-    }
+
 
     public Boolean isPhoneExists(String phone) {
         for (Contact c: contactArray) {
